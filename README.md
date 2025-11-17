@@ -255,6 +255,33 @@ mybambu-claude-whatsapp/
 
 ---
 
+## 📦 Deployment
+
+**This repository runs LOCALLY ONLY** - no cloud deployment needed.
+
+### Why Local?
+- Claude Desktop MCP servers run as local processes
+- Integrated directly with Claude Desktop app
+- No need for public webhooks or URLs
+
+### Current Setup
+```bash
+Location: /Users/edisonespinosa/mybambu-claude-whatsapp/
+Executed by: Claude Desktop app via MCP protocol
+Config: ~/Library/Application Support/Claude/claude_desktop_config.json
+```
+
+### GitHub Pages (Documentation Only)
+- **Live Showcase**: http://foxie.cool/conversational-transfers/
+- **Source**: `docs/index.html` in this repository
+- **Purpose**: Public-facing website (no server functionality)
+
+**No Railway/Render deployment needed** ✅
+
+For detailed deployment information across all repositories, see `DEPLOYMENT-GUIDE.md` in the main workspace.
+
+---
+
 ## 🏆 What Makes This Special
 
 This is the **first known implementation** of:
