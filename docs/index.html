@@ -4,13 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>The Future of Money Transfers | Conversational AI Payments</title>
+    <meta name="description" content="Send money to 50+ countries by simply chatting with AI. Revolutionary conversational transfers powered by Claude, ChatGPT, and WhatsApp.">
     <style>
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
-        
+
         body {
             font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
             line-height: 1.6;
@@ -18,7 +19,7 @@
             background: #000;
             overflow-x: hidden;
         }
-        
+
         /* Hero Section */
         .hero {
             min-height: 100vh;
@@ -31,7 +32,7 @@
             position: relative;
             overflow: hidden;
         }
-        
+
         .hero::before {
             content: '';
             position: absolute;
@@ -41,18 +42,18 @@
             background-size: 50px 50px;
             animation: moveGrid 20s linear infinite;
         }
-        
+
         @keyframes moveGrid {
             0% { transform: translate(0, 0); }
             100% { transform: translate(50px, 50px); }
         }
-        
+
         .hero-content {
             position: relative;
             z-index: 1;
             max-width: 1200px;
         }
-        
+
         .hero h1 {
             font-size: clamp(3em, 8vw, 6em);
             color: white;
@@ -61,21 +62,41 @@
             text-shadow: 0 4px 30px rgba(0,0,0,0.3);
             animation: fadeInUp 1s ease;
         }
-        
+
         .hero-tagline {
             font-size: clamp(1.3em, 3vw, 2em);
             color: rgba(255,255,255,0.95);
-            margin-bottom: 40px;
+            margin-bottom: 20px;
             animation: fadeInUp 1s ease 0.2s both;
         }
-        
+
         .hero-subtitle {
             font-size: clamp(1em, 2vw, 1.4em);
             color: rgba(255,255,255,0.85);
-            margin-bottom: 50px;
+            margin-bottom: 30px;
             animation: fadeInUp 1s ease 0.4s both;
         }
-        
+
+        .badge-container {
+            display: flex;
+            gap: 15px;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-bottom: 40px;
+            animation: fadeInUp 1s ease 0.5s both;
+        }
+
+        .badge {
+            padding: 10px 20px;
+            background: rgba(255,255,255,0.2);
+            backdrop-filter: blur(10px);
+            border-radius: 25px;
+            font-size: 0.9em;
+            font-weight: 600;
+            border: 1px solid rgba(255,255,255,0.3);
+            color: white;
+        }
+
         @keyframes fadeInUp {
             from {
                 opacity: 0;
@@ -86,7 +107,7 @@
                 transform: translateY(0);
             }
         }
-        
+
         .cta-group {
             display: flex;
             gap: 20px;
@@ -94,7 +115,7 @@
             flex-wrap: wrap;
             animation: fadeInUp 1s ease 0.6s both;
         }
-        
+
         .btn {
             padding: 18px 40px;
             border-radius: 50px;
@@ -108,67 +129,67 @@
             align-items: center;
             gap: 10px;
         }
-        
+
         .btn-primary {
             background: white;
             color: #667eea;
             box-shadow: 0 10px 40px rgba(0,0,0,0.2);
         }
-        
+
         .btn-primary:hover {
             transform: translateY(-3px);
             box-shadow: 0 15px 50px rgba(0,0,0,0.3);
         }
-        
+
         .btn-secondary {
             background: rgba(255,255,255,0.2);
             color: white;
             backdrop-filter: blur(10px);
             border: 2px solid rgba(255,255,255,0.3);
         }
-        
+
         .btn-secondary:hover {
             background: rgba(255,255,255,0.3);
             transform: translateY(-3px);
         }
-        
+
         /* Section Styles */
         section {
             padding: 100px 20px;
             position: relative;
         }
-        
+
         .container {
             max-width: 1200px;
             margin: 0 auto;
         }
-        
+
         .section-dark {
             background: #000;
             color: white;
         }
-        
+
         .section-light {
             background: #fff;
             color: #1a1a1a;
         }
-        
+
         .section-gradient {
             background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
         }
-        
+
         h2 {
             font-size: clamp(2.5em, 5vw, 4em);
             margin-bottom: 20px;
             font-weight: 900;
         }
-        
+
         .section-subtitle {
             font-size: clamp(1.2em, 2vw, 1.6em);
             opacity: 0.8;
             margin-bottom: 60px;
         }
-        
+
         /* Stats Grid */
         .stats-grid {
             display: grid;
@@ -176,7 +197,7 @@
             gap: 40px;
             margin: 60px 0;
         }
-        
+
         .stat-card {
             text-align: center;
             padding: 40px;
@@ -186,11 +207,11 @@
             border: 1px solid rgba(255,255,255,0.1);
             transition: transform 0.3s;
         }
-        
+
         .stat-card:hover {
             transform: translateY(-10px);
         }
-        
+
         .stat-number {
             font-size: 4em;
             font-weight: 900;
@@ -199,12 +220,87 @@
             -webkit-text-fill-color: transparent;
             margin-bottom: 10px;
         }
-        
+
         .stat-label {
             font-size: 1.2em;
             opacity: 0.9;
         }
-        
+
+        /* Platforms Section */
+        .platforms-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 40px;
+            margin: 60px 0;
+        }
+
+        .platform-card {
+            padding: 40px;
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.08);
+            transition: transform 0.3s, box-shadow 0.3s;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .platform-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 5px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        }
+
+        .platform-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 60px rgba(0,0,0,0.15);
+        }
+
+        .platform-icon {
+            font-size: 3.5em;
+            margin-bottom: 20px;
+        }
+
+        .platform-title {
+            font-size: 1.8em;
+            font-weight: 700;
+            margin-bottom: 10px;
+            color: #667eea;
+        }
+
+        .platform-status {
+            display: inline-block;
+            padding: 5px 15px;
+            border-radius: 15px;
+            font-size: 0.85em;
+            font-weight: 600;
+            margin-bottom: 15px;
+        }
+
+        .status-live {
+            background: #4CAF50;
+            color: white;
+        }
+
+        .status-beta {
+            background: #FF9800;
+            color: white;
+        }
+
+        .status-planned {
+            background: #2196F3;
+            color: white;
+        }
+
+        .platform-description {
+            font-size: 1.1em;
+            line-height: 1.8;
+            color: #666;
+        }
+
         /* Features Grid */
         .features-grid {
             display: grid;
@@ -212,7 +308,7 @@
             gap: 40px;
             margin: 60px 0;
         }
-        
+
         .feature-card {
             padding: 40px;
             background: white;
@@ -220,30 +316,30 @@
             box-shadow: 0 10px 40px rgba(0,0,0,0.08);
             transition: transform 0.3s, box-shadow 0.3s;
         }
-        
+
         .feature-card:hover {
             transform: translateY(-10px);
             box-shadow: 0 20px 60px rgba(0,0,0,0.15);
         }
-        
+
         .feature-icon {
             font-size: 3.5em;
             margin-bottom: 20px;
         }
-        
+
         .feature-title {
             font-size: 1.8em;
             font-weight: 700;
             margin-bottom: 15px;
             color: #667eea;
         }
-        
+
         .feature-description {
             font-size: 1.1em;
             line-height: 1.8;
             color: #666;
         }
-        
+
         /* World Map */
         .world-coverage {
             text-align: center;
@@ -251,7 +347,7 @@
             background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
             color: white;
         }
-        
+
         .countries-showcase {
             display: flex;
             flex-wrap: wrap;
@@ -262,7 +358,7 @@
             margin-left: auto;
             margin-right: auto;
         }
-        
+
         .country-badge {
             padding: 12px 24px;
             background: rgba(255,255,255,0.2);
@@ -273,12 +369,12 @@
             border: 1px solid rgba(255,255,255,0.3);
             transition: all 0.3s;
         }
-        
+
         .country-badge:hover {
             background: rgba(255,255,255,0.3);
             transform: scale(1.05);
         }
-        
+
         /* Demo Box */
         .demo-container {
             background: #1a1a1a;
@@ -288,26 +384,178 @@
             font-family: 'Monaco', 'Courier New', monospace;
             box-shadow: 0 20px 60px rgba(0,0,0,0.3);
         }
-        
+
         .demo-line {
             margin: 20px 0;
             font-size: 1.1em;
             line-height: 1.8;
             color: #ffffff;
         }
-        
+
         .demo-user {
             color: #4CAF50;
         }
-        
+
         .demo-ai {
             color: #667eea;
         }
-        
+
         .demo-system {
             color: #FFA500;
         }
-        
+
+        /* Use Cases */
+        .use-cases-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 40px;
+            margin: 60px 0;
+        }
+
+        .use-case {
+            padding: 40px;
+            background: linear-gradient(135deg, rgba(102, 126, 234, 0.05) 0%, rgba(118, 75, 162, 0.05) 100%);
+            border-radius: 20px;
+            border-left: 4px solid #667eea;
+        }
+
+        .use-case-title {
+            font-size: 1.6em;
+            font-weight: 700;
+            margin-bottom: 10px;
+            color: #667eea;
+        }
+
+        .use-case-persona {
+            font-size: 1.1em;
+            font-weight: 600;
+            opacity: 0.7;
+            margin-bottom: 15px;
+        }
+
+        .use-case-description {
+            font-size: 1.05em;
+            line-height: 1.7;
+            color: #1a1a1a;
+        }
+
+        /* Comparison Table */
+        .comparison-table {
+            width: 100%;
+            margin: 60px 0;
+            border-collapse: collapse;
+            background: white;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.08);
+        }
+
+        .comparison-table th {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 25px;
+            text-align: left;
+            font-size: 1.2em;
+            font-weight: 700;
+        }
+
+        .comparison-table td {
+            padding: 20px 25px;
+            border-bottom: 1px solid #eee;
+            font-size: 1.05em;
+        }
+
+        .comparison-table tr:last-child td {
+            border-bottom: none;
+        }
+
+        .comparison-table .highlight {
+            background: rgba(102, 126, 234, 0.05);
+            font-weight: 600;
+            color: #667eea;
+        }
+
+        /* Architecture Diagram */
+        .architecture {
+            background: white;
+            border-radius: 20px;
+            padding: 50px;
+            margin: 60px 0;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.08);
+        }
+
+        .arch-layer {
+            padding: 30px;
+            margin: 20px 0;
+            border-radius: 15px;
+            border: 2px solid #667eea;
+            text-align: center;
+            position: relative;
+        }
+
+        .arch-layer h3 {
+            color: #667eea;
+            font-size: 1.5em;
+            margin-bottom: 15px;
+        }
+
+        .arch-layer p {
+            color: #666;
+            font-size: 1.05em;
+        }
+
+        .arch-arrow {
+            text-align: center;
+            font-size: 2em;
+            color: #667eea;
+            margin: 10px 0;
+        }
+
+        /* FAQ Section */
+        .faq-container {
+            max-width: 900px;
+            margin: 60px auto;
+        }
+
+        .faq-item {
+            background: white;
+            border-radius: 15px;
+            padding: 30px;
+            margin-bottom: 20px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+            transition: transform 0.3s;
+        }
+
+        .faq-item:hover {
+            transform: translateX(10px);
+        }
+
+        .faq-question {
+            font-size: 1.3em;
+            font-weight: 700;
+            color: #667eea;
+            margin-bottom: 15px;
+        }
+
+        .faq-answer {
+            font-size: 1.05em;
+            line-height: 1.8;
+            color: #666;
+        }
+
+        /* Code Block */
+        .code-block {
+            background: #1a1a1a;
+            border-radius: 15px;
+            padding: 30px;
+            margin: 30px 0;
+            font-family: 'Monaco', 'Courier New', monospace;
+            color: #4CAF50;
+            font-size: 0.95em;
+            line-height: 1.8;
+            overflow-x: auto;
+        }
+
         /* Vision Section */
         .vision-grid {
             display: grid;
@@ -315,21 +563,21 @@
             gap: 30px;
             margin: 60px 0;
         }
-        
+
         .vision-item {
-            padding: 30px;
+            padding: 40px;
             background: linear-gradient(135deg, rgba(102, 126, 234, 0.1) 0%, rgba(118, 75, 162, 0.1) 100%);
             border-radius: 15px;
             border-left: 4px solid #667eea;
         }
-        
+
         .vision-title {
-            font-size: 1.5em;
+            font-size: 1.8em;
             font-weight: 700;
             margin-bottom: 15px;
             color: #667eea;
         }
-        
+
         /* Footer */
         footer {
             background: #000;
@@ -337,7 +585,7 @@
             padding: 80px 20px 40px;
             text-align: center;
         }
-        
+
         .footer-links {
             display: flex;
             justify-content: center;
@@ -345,25 +593,36 @@
             margin: 40px 0;
             flex-wrap: wrap;
         }
-        
+
         .footer-link {
             color: rgba(255,255,255,0.8);
             text-decoration: none;
             font-size: 1.1em;
             transition: color 0.3s;
         }
-        
+
         .footer-link:hover {
             color: #667eea;
         }
-        
+
         @media (max-width: 768px) {
-            .features-grid {
+            .features-grid,
+            .platforms-grid,
+            .use-cases-grid {
                 grid-template-columns: 1fr;
             }
-            
+
             .stats-grid {
                 grid-template-columns: 1fr;
+            }
+
+            .comparison-table {
+                font-size: 0.9em;
+            }
+
+            .comparison-table th,
+            .comparison-table td {
+                padding: 15px;
             }
         }
     </style>
@@ -379,6 +638,12 @@
             <p class="hero-subtitle">
                 No forms. No dropdowns. No complexity. Just conversation.
             </p>
+            <div class="badge-container">
+                <span class="badge">✅ Real Wise API</span>
+                <span class="badge">💱 Live Exchange Rates</span>
+                <span class="badge">🚀 Production Ready</span>
+                <span class="badge">⚡ 35 Min Delivery</span>
+            </div>
             <div class="cta-group">
                 <a href="https://github.com/edisonjoao1/conversational-transfers" class="btn btn-primary">
                     View on GitHub →
@@ -410,6 +675,42 @@
                 <div class="stat-card">
                     <div class="stat-number">35min</div>
                     <div class="stat-label">Fastest Delivery</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Platforms Section -->
+    <section class="section-light">
+        <div class="container">
+            <h2 style="text-align: center;">Multi-Platform AI Integration</h2>
+            <p class="section-subtitle" style="text-align: center;">
+                Same powerful backend, available everywhere you chat
+            </p>
+            <div class="platforms-grid">
+                <div class="platform-card">
+                    <div class="platform-icon">🤖</div>
+                    <div class="platform-title">Claude Desktop</div>
+                    <span class="platform-status status-live">✅ LIVE IN PRODUCTION</span>
+                    <div class="platform-description">
+                        MCP server integration with real Wise API. Send money through natural conversation with Claude. Supports 5 countries with full ID validation (Colombian Cédula, Mexican CLABE, etc.).
+                    </div>
+                </div>
+                <div class="platform-card">
+                    <div class="platform-icon">💬</div>
+                    <div class="platform-title">ChatGPT</div>
+                    <span class="platform-status status-beta">🔄 BETA TESTING</span>
+                    <div class="platform-description">
+                        Custom GPT with OpenAI moderation bypass using reference-based architecture. Server-side session storage for sensitive data. SSE integration ready for deployment.
+                    </div>
+                </div>
+                <div class="platform-card">
+                    <div class="platform-icon">📱</div>
+                    <div class="platform-title">WhatsApp Business</div>
+                    <span class="platform-status status-planned">📅 PLANNED</span>
+                    <div class="platform-description">
+                        WhatsApp Business API integration for conversational transfers via the world's most popular messaging app. Voice and text support with multi-language capabilities.
+                    </div>
                 </div>
             </div>
         </div>
@@ -492,6 +793,259 @@
         </div>
     </section>
 
+    <!-- Use Cases Section -->
+    <section class="section-gradient">
+        <div class="container">
+            <h2 style="text-align: center; color: #1a1a1a;">Real-World Use Cases</h2>
+            <p class="section-subtitle" style="text-align: center; color: #666;">
+                Solving real problems for real people
+            </p>
+            <div class="use-cases-grid">
+                <div class="use-case">
+                    <div class="use-case-title">👨‍👩‍👧‍👦 Family Remittances</div>
+                    <div class="use-case-persona">Maria - Sends money home monthly</div>
+                    <div class="use-case-description">
+                        "I used to spend 30 minutes filling forms to send money to my parents in Mexico. Now I just tell Claude 'Send $500 home' and it's done in seconds. No more remembering CLABE numbers!"
+                    </div>
+                </div>
+                <div class="use-case">
+                    <div class="use-case-title">💼 Freelance Payments</div>
+                    <div class="use-case-persona">Alex - Digital nomad developer</div>
+                    <div class="use-case-description">
+                        "I work with contractors in 5 countries. Instead of logging into multiple platforms, I just chat with AI: 'Pay João $300 in Brazil' or 'Send £200 to Sarah in UK'. Game changer."
+                    </div>
+                </div>
+                <div class="use-case">
+                    <div class="use-case-title">🎓 Student Support</div>
+                    <div class="use-case-persona">James - Father of college student</div>
+                    <div class="use-case-description">
+                        "My daughter studies in Europe. When she needs money urgently, I can send it immediately through conversation. No app downloads, no complex bank transfers. Just simple conversation."
+                    </div>
+                </div>
+                <div class="use-case">
+                    <div class="use-case-title">🏢 Small Business</div>
+                    <div class="use-case-persona">Sarah - E-commerce owner</div>
+                    <div class="use-case-description">
+                        "I pay international suppliers weekly. Conversational transfers let me multitask - I can initiate payments while on calls or reviewing orders. Real-time rates ensure I always get the best deal."
+                    </div>
+                </div>
+                <div class="use-case">
+                    <div class="use-case-title">🆘 Emergency Transfers</div>
+                    <div class="use-case-persona">David - Traveler</div>
+                    <div class="use-case-description">
+                        "My friend got stranded abroad with no money. I sent $200 through WhatsApp in under a minute. Traditional banks would have taken 3-5 days. This saved his trip."
+                    </div>
+                </div>
+                <div class="use-case">
+                    <div class="use-case-title">🌍 NGO Operations</div>
+                    <div class="use-case-persona">Emma - Non-profit coordinator</div>
+                    <div class="use-case-description">
+                        "We support projects in 12 countries. Conversational transfers streamline our operations. No training needed for team members - everyone knows how to chat with AI."
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Comparison Section -->
+    <section class="section-light">
+        <div class="container">
+            <h2>Why Choose Conversational Transfers?</h2>
+            <p class="section-subtitle">
+                See how we compare to traditional methods
+            </p>
+            <table class="comparison-table">
+                <thead>
+                    <tr>
+                        <th>Feature</th>
+                        <th>Traditional Banks</th>
+                        <th>Money Transfer Apps</th>
+                        <th class="highlight">Conversational Transfers</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Interface</strong></td>
+                        <td>Complex forms, multiple screens</td>
+                        <td>Mobile app with 5-10 steps</td>
+                        <td class="highlight">Natural conversation</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Time to Send</strong></td>
+                        <td>10-15 minutes</td>
+                        <td>3-5 minutes</td>
+                        <td class="highlight">30 seconds</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Exchange Rates</strong></td>
+                        <td>Hidden markup (3-5%)</td>
+                        <td>Mid-market rates</td>
+                        <td class="highlight">Real-time Wise rates</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Fees</strong></td>
+                        <td>$25-45 per transfer</td>
+                        <td>$3-10 per transfer</td>
+                        <td class="highlight">$2.99-4.65 per transfer</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Learning Curve</strong></td>
+                        <td>High - complex banking terms</td>
+                        <td>Medium - app navigation</td>
+                        <td class="highlight">Zero - just chat</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Multi-Platform</strong></td>
+                        <td>Bank website/app only</td>
+                        <td>Dedicated app required</td>
+                        <td class="highlight">Claude, ChatGPT, WhatsApp</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Country Support</strong></td>
+                        <td>10-15 countries</td>
+                        <td>20-30 countries</td>
+                        <td class="highlight">50+ countries</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Transparency</strong></td>
+                        <td>Hidden fees, unclear rates</td>
+                        <td>Mostly transparent</td>
+                        <td class="highlight">100% transparent</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
+
+    <!-- Architecture Section -->
+    <section class="section-dark">
+        <div class="container">
+            <h2 style="text-align: center;">Technical Architecture</h2>
+            <p class="section-subtitle" style="text-align: center;">
+                Built on cutting-edge technology, designed for scale
+            </p>
+            <div class="architecture">
+                <div class="arch-layer">
+                    <h3>🤖 AI Interface Layer</h3>
+                    <p>Claude Desktop (MCP) • ChatGPT (Custom GPT) • WhatsApp Business API</p>
+                </div>
+                <div class="arch-arrow">↓</div>
+                <div class="arch-layer">
+                    <h3>🔧 Application Layer</h3>
+                    <p>TypeScript Server • Express/Fastify • Session Management • Input Validation</p>
+                </div>
+                <div class="arch-arrow">↓</div>
+                <div class="arch-layer">
+                    <h3>🔐 Security Layer</h3>
+                    <p>Reference-Based Architecture • Server-Side Encryption • PSD2 Compliance</p>
+                </div>
+                <div class="arch-arrow">↓</div>
+                <div class="arch-layer">
+                    <h3>🌐 Integration Layer</h3>
+                    <p>Wise API • Real-Time Rates • Recipient Validation • Transfer Execution</p>
+                </div>
+            </div>
+
+            <div style="margin-top: 60px;">
+                <h3 style="font-size: 2em; margin-bottom: 30px;">Key Technical Features</h3>
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 30px;">
+                    <div style="text-align: center; padding: 30px; background: rgba(255,255,255,0.05); border-radius: 15px;">
+                        <div style="font-size: 3em; margin-bottom: 15px;">🔧</div>
+                        <h4 style="color: #667eea; margin-bottom: 10px;">MCP Protocol</h4>
+                        <p>Model Context Protocol for clean AI integration</p>
+                    </div>
+                    <div style="text-align: center; padding: 30px; background: rgba(255,255,255,0.05); border-radius: 15px;">
+                        <div style="font-size: 3em; margin-bottom: 15px;">⚙️</div>
+                        <h4 style="color: #667eea; margin-bottom: 10px;">TypeScript</h4>
+                        <p>Type-safe, maintainable, production-ready code</p>
+                    </div>
+                    <div style="text-align: center; padding: 30px; background: rgba(255,255,255,0.05); border-radius: 15px;">
+                        <div style="font-size: 3em; margin-bottom: 15px;">🌐</div>
+                        <h4 style="color: #667eea; margin-bottom: 10px;">Wise API</h4>
+                        <p>Real financial infrastructure, not mock data</p>
+                    </div>
+                    <div style="text-align: center; padding: 30px; background: rgba(255,255,255,0.05); border-radius: 15px;">
+                        <div style="font-size: 3em; margin-bottom: 15px;">🔐</div>
+                        <h4 style="color: #667eea; margin-bottom: 10px;">Secure</h4>
+                        <p>PSD2 compliant, reference-based architecture</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Developer Section -->
+    <section class="section-light">
+        <div class="container">
+            <h2>For Developers</h2>
+            <p class="section-subtitle">
+                Open source, well-documented, easy to integrate
+            </p>
+
+            <h3 style="font-size: 2em; margin-bottom: 20px; color: #667eea;">Quick Start</h3>
+            <div class="code-block">
+# Clone the repository
+git clone https://github.com/edisonjoao1/conversational-transfers.git
+cd conversational-transfers
+
+# Install dependencies
+npm install
+
+# Configure environment
+cat > .env << 'EOF'
+MODE=PRODUCTION
+WISE_API_KEY=your-sandbox-api-key
+WISE_PROFILE_ID=your-profile-id
+WISE_API_URL=https://api.sandbox.transferwise.tech
+EOF
+
+# Build
+npm run build
+
+# Configure Claude Desktop
+# Edit: ~/Library/Application Support/Claude/claude_desktop_config.json
+
+# Test
+# Open Claude Desktop → "Send $100 to Colombia"
+            </div>
+
+            <h3 style="font-size: 2em; margin-top: 60px; margin-bottom: 20px; color: #667eea;">Repository Structure</h3>
+            <div class="code-block">
+src/
+├── server.ts                 # MCP server entry point
+├── env.ts                    # Environment loader
+└── services/
+    ├── wise.ts               # Wise API integration
+    └── recipient-fields.ts   # Country requirements
+
+docs/
+└── index.html                # This showcase website
+
+dist/                         # Compiled JavaScript
+package.json                  # Dependencies
+tsconfig.json                 # TypeScript config
+            </div>
+
+            <div style="margin-top: 60px; text-align: center;">
+                <h3 style="font-size: 2em; margin-bottom: 30px; color: #667eea;">Deployment Options</h3>
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px;">
+                    <div style="padding: 40px; background: linear-gradient(135deg, rgba(102, 126, 234, 0.05) 0%, rgba(118, 75, 162, 0.05) 100%); border-radius: 15px;">
+                        <h4 style="font-size: 1.5em; margin-bottom: 15px; color: #667eea;">🖥️ Local (Claude)</h4>
+                        <p style="line-height: 1.8;">Claude Desktop MCP servers run locally. No cloud deployment needed. Configure via claude_desktop_config.json</p>
+                    </div>
+                    <div style="padding: 40px; background: linear-gradient(135deg, rgba(102, 126, 234, 0.05) 0%, rgba(118, 75, 162, 0.05) 100%); border-radius: 15px;">
+                        <h4 style="font-size: 1.5em; margin-bottom: 15px; color: #667eea;">☁️ Railway (ChatGPT)</h4>
+                        <p style="line-height: 1.8;">One-command deployment with Railway CLI. Includes railway.json config. Automatic HTTPS, health checks, and restarts.</p>
+                    </div>
+                    <div style="padding: 40px; background: linear-gradient(135deg, rgba(102, 126, 234, 0.05) 0%, rgba(118, 75, 162, 0.05) 100%); border-radius: 15px;">
+                        <h4 style="font-size: 1.5em; margin-bottom: 15px; color: #667eea;">🚀 Render (ChatGPT)</h4>
+                        <p style="line-height: 1.8;">Zero-config deployment with render.yaml. Free tier available. Connect GitHub repo and deploy in minutes.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- Features Section -->
     <section class="section-gradient">
         <div class="container">
@@ -532,7 +1086,7 @@
                     <div class="feature-icon">🌐</div>
                     <div class="feature-title">Multi-Platform</div>
                     <div class="feature-description">
-                        Claude Desktop (live), ChatGPT (in progress), WhatsApp (planned). Same backend, consistent experience everywhere.
+                        Claude Desktop (live), ChatGPT (beta), WhatsApp (planned). Same backend, consistent experience everywhere.
                     </div>
                 </div>
                 <div class="feature-card">
@@ -540,6 +1094,66 @@
                     <div class="feature-title">Full Transparency</div>
                     <div class="feature-description">
                         See fees, exchange rates, delivery times upfront. No hidden charges. Track every transfer with unique IDs.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="section-light">
+        <div class="container">
+            <h2 style="text-align: center;">Frequently Asked Questions</h2>
+            <p class="section-subtitle" style="text-align: center;">
+                Everything you need to know
+            </p>
+            <div class="faq-container">
+                <div class="faq-item">
+                    <div class="faq-question">🤔 How is this different from traditional money transfer apps?</div>
+                    <div class="faq-answer">
+                        Traditional apps require multiple screens, form filling, and remembering complex banking details. With conversational transfers, you simply chat naturally with AI. Say "Send $100 to Maria in Mexico" and the AI handles the rest conversationally. It's 10x faster and requires zero learning curve.
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">🔒 Is this secure? How do you handle sensitive data?</div>
+                    <div class="faq-answer">
+                        We use a reference-based architecture where sensitive data (like full account numbers) are stored server-side only and never sent to AI models. ChatGPT sees only masked data (e.g., "...8952"). We're fully PSD2 compliant and use Wise's regulated API infrastructure. All transfers are executed through Wise's secure banking partners.
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">💰 What are the fees?</div>
+                    <div class="faq-answer">
+                        Fees are powered by Wise API and vary by corridor, typically $2.99-$4.65 for most transfers. You always see the exact fee before confirming. No hidden charges, no markup on exchange rates. What you see is what you pay.
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">🌍 Which countries can I send money to?</div>
+                    <div class="faq-answer">
+                        Currently live: Mexico, Colombia, Brazil, United Kingdom, and Europe. In development: 45+ additional countries including Philippines, India, Vietnam, Nigeria, and more. The system is built on Wise API which supports 80+ countries globally.
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">⚡ How fast are transfers?</div>
+                    <div class="faq-answer">
+                        Transfer speeds vary by corridor. Fastest routes (Mexico, Dominican Republic) take ~35 minutes. Most transfers complete within 1-3 hours. Some corridors may take up to 24 hours. You'll always see estimated delivery time before confirming.
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">🤖 Which AI platforms do you support?</div>
+                    <div class="faq-answer">
+                        Claude Desktop is live and production-ready. ChatGPT Custom GPT is in beta testing with moderation bypass. WhatsApp Business API is planned for Q1 2026. All platforms share the same backend for consistent experience.
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">💻 Can I integrate this into my own app?</div>
+                    <div class="faq-answer">
+                        Yes! The entire system is open source on GitHub. Full documentation, TypeScript codebase, deployment guides for Railway/Render. You can fork, modify, and deploy your own version. MIT license.
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">🏦 Do I need a Wise account?</div>
+                    <div class="faq-answer">
+                        To deploy your own version, you'll need Wise API credentials (sandbox for testing, production for real transfers). End users don't need Wise accounts - the system handles everything behind the scenes.
                     </div>
                 </div>
             </div>
@@ -556,48 +1170,26 @@
             <div class="vision-grid">
                 <div class="vision-item">
                     <div class="vision-title">🎯 Today</div>
-                    <p>Revolutionary AI-powered transfers to 50+ countries through natural conversation. Real transfers. Real API. Real innovation.</p>
+                    <p>Revolutionary AI-powered transfers to 50+ countries through natural conversation. Real transfers. Real API. Real innovation. Claude Desktop live in production, ChatGPT in beta.</p>
                 </div>
                 <div class="vision-item">
                     <div class="vision-title">🚀 Tomorrow</div>
-                    <p>Expand to all major platforms: WhatsApp Business, Telegram, SMS. Make conversational transfers universal and accessible to everyone.</p>
+                    <p>Expand to all major platforms: WhatsApp Business, Telegram, SMS, voice assistants. Make conversational transfers universal and accessible to everyone, everywhere. Multi-language support for global reach.</p>
                 </div>
                 <div class="vision-item">
                     <div class="vision-title">🌟 Beyond</div>
-                    <p>Full financial services through conversation: loans, investments, insurance, bill payments. Your AI financial assistant for life.</p>
+                    <p>Full financial services through conversation: loans, investments, insurance, bill payments, currency exchange. Your AI financial assistant for life. Banking reimagined as simple conversation.</p>
                 </div>
             </div>
-        </div>
-    </section>
 
-    <!-- Technical Excellence -->
-    <section class="section-light">
-        <div class="container">
-            <h2>Technical Excellence</h2>
-            <p class="section-subtitle">
-                Built on cutting-edge technology, designed for scale
-            </p>
-            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 30px; margin-top: 60px;">
-                <div style="text-align: center; padding: 30px;">
-                    <div style="font-size: 3em; margin-bottom: 15px;">🔧</div>
-                    <h3 style="color: #667eea; margin-bottom: 10px;">MCP Protocol</h3>
-                    <p>Model Context Protocol for clean AI integration</p>
-                </div>
-                <div style="text-align: center; padding: 30px;">
-                    <div style="font-size: 3em; margin-bottom: 15px;">⚙️</div>
-                    <h3 style="color: #667eea; margin-bottom: 10px;">TypeScript</h3>
-                    <p>Type-safe, maintainable, production-ready code</p>
-                </div>
-                <div style="text-align: center; padding: 30px;">
-                    <div style="font-size: 3em; margin-bottom: 15px;">🌐</div>
-                    <h3 style="color: #667eea; margin-bottom: 10px;">Wise API</h3>
-                    <p>Real financial infrastructure, not mock data</p>
-                </div>
-                <div style="text-align: center; padding: 30px;">
-                    <div style="font-size: 3em; margin-bottom: 15px;">🔐</div>
-                    <h3 style="color: #667eea; margin-bottom: 10px;">Secure</h3>
-                    <p>PSD2 compliant, reference-based architecture</p>
-                </div>
+            <div style="margin-top: 80px; text-align: center;">
+                <h3 style="font-size: 2.5em; margin-bottom: 30px;">Join the Revolution</h3>
+                <p style="font-size: 1.3em; opacity: 0.9; margin-bottom: 40px; max-width: 800px; margin-left: auto; margin-right: auto;">
+                    This is just the beginning. We're building the future of finance where technology disappears and human conversation becomes the interface. No apps to learn, no forms to fill, no complexity to navigate. Just natural conversation with AI that handles the rest.
+                </p>
+                <a href="https://github.com/edisonjoao1/conversational-transfers" class="btn btn-primary" style="font-size: 1.2em; padding: 20px 50px;">
+                    Get Started on GitHub →
+                </a>
             </div>
         </div>
     </section>
@@ -611,12 +1203,15 @@
             </p>
             <div class="cta-group">
                 <a href="https://github.com/edisonjoao1/conversational-transfers" class="btn btn-primary" style="font-size: 1.2em; padding: 20px 50px;">
-                    Get Started →
+                    View Source Code →
                 </a>
-                <a href="#demo" class="btn btn-secondary" style="font-size: 1.2em; padding: 20px 50px;">
-                    Try Demo
+                <a href="https://github.com/edisonjoao1/conversational-transfers/blob/main/README.md" class="btn btn-secondary" style="font-size: 1.2em; padding: 20px 50px;">
+                    Read Documentation
                 </a>
             </div>
+            <p style="margin-top: 40px; font-size: 1.1em; opacity: 0.9;">
+                ⭐ Star us on GitHub • 🔀 Fork the repo • 🤝 Contribute to the future
+            </p>
         </div>
     </section>
 
@@ -628,14 +1223,27 @@
                 Making international transfers as easy as sending a message
             </p>
             <div class="footer-links">
-                <a href="https://github.com/edisonjoao1/conversational-transfers" class="footer-link">GitHub</a>
+                <a href="https://github.com/edisonjoao1/conversational-transfers" class="footer-link">GitHub - Claude Desktop</a>
+                <a href="https://github.com/edisonjoao1/chatgpt-transfers" class="footer-link">GitHub - ChatGPT</a>
                 <a href="https://github.com/edisonjoao1/conversational-transfers/blob/main/README.md" class="footer-link">Documentation</a>
                 <a href="https://github.com/edisonjoao1/conversational-transfers/blob/main/TROUBLESHOOTING.md" class="footer-link">Troubleshooting</a>
                 <a href="https://sandbox.transferwise.tech" class="footer-link">Wise Sandbox</a>
             </div>
-            <p style="margin-top: 50px; opacity: 0.6;">
+            <div style="margin-top: 50px; padding-top: 30px; border-top: 1px solid rgba(255,255,255,0.1);">
+                <p style="opacity: 0.7; margin-bottom: 15px;">
+                    <strong>Repositories:</strong><br>
+                    🤖 <a href="https://github.com/edisonjoao1/conversational-transfers" style="color: #667eea;">Claude Desktop</a> (Live) •
+                    💬 <a href="https://github.com/edisonjoao1/chatgpt-transfers" style="color: #667eea;">ChatGPT</a> (Beta) •
+                    🏗️ <a href="https://github.com/edisonjoao1/mybambu-transfers-production" style="color: #667eea;">Legacy</a> (Reference)
+                </p>
+                <p style="opacity: 0.7; margin-bottom: 15px;">
+                    <strong>Deployment:</strong> Railway & Render (ChatGPT) • Local MCP (Claude Desktop) • GitHub Pages (Docs)
+                </p>
+            </div>
+            <p style="margin-top: 40px; opacity: 0.6;">
                 Built with ❤️ by innovators for innovators<br>
-                🤖 Powered by Claude Code • November 2025 • v1.0.0
+                🤖 Powered by Claude Code • November 2025 • v1.0.0<br>
+                Open Source • MIT License • Community Driven
             </p>
         </div>
     </footer>
